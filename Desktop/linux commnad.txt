@@ -43,6 +43,8 @@ update-alternatives --config java   --------> to switch one java version to new 
 --- yum remove java* 
 ####################
 ######## sudo apt-get install openjdk-11-jdk -y
+
+yum install java-1.8.0-openjdk -y
 ########################################
 
 jenkins password forget --------> config.xml
