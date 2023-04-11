@@ -1,0 +1,36 @@
+sudo su
+sudo apt-get update
+java --version
+sudo apt-get install openjdk-11-jdk -y
+java --version
+sudo apt install wget
+cd /opt/
+ls
+tar zxf apache-maven-3.9.1-bin.tar.gz
+cd apache-maven-3.9.1/
+ls
+cd bin
+ls 
+cd
+mvn --version
+cd /opt
+export PATH=$PATH:/opt/apache-maven-3.9.1/bin
+mvn --version
+mvn archetype:generate
+groupid:com.www.mvnproj
+artifactid:sample_jarproj
+snapshot-version:1.1
+ls
+apt install tree -y
+cd sample_jarproj
+mvn compile
+tree
+ls
+mvn test-compile
+ls
+tree
+mvn test
+tree
+mvn install
+
+
