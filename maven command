@@ -6,6 +6,7 @@ java --version
 sudo apt install wget
 cd /opt/
 ls
+wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
 tar zxf apache-maven-3.9.1-bin.tar.gz
 cd apache-maven-3.9.1/
 ls
@@ -32,5 +33,20 @@ tree
 mvn test
 tree
 mvn install
+
+copy git <url> and clone
+
+git clone <url>
+ls
+cd <reponame/directory name>
+ls
+tree
+ls
+mvn compile
+tree
+mvn test-compile
+tree
+mvn install
+tree
 
 
