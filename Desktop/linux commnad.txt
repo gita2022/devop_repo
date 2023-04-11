@@ -1,0 +1,80 @@
+ ....linux command....
+###make sure you have root privilage <sudo su> ie #
+
+
+useradd <username> ----user creation                          >> to see what username is --cat /etc/passwd 
+passwd <username> -----set user password                      >> to see password info.  nof username -- cat /etc/shadow        
+
+groupadd <groupname> ----- create group			      >> to see group name ---cat /etc/group
+usermod -aG <groupname> <username>  ---to add user to group
+usermod -n <newusername> <oldname> ----to change username
+gpasswd -d <username> <groupname> ----- to remove user from group
+usermod -g <newuser id > <username> ---to change user id
+
+groupmod -n <newgroup name> <old groupname> --- to change group name
+groupmod -g <new id of groupname> <groupname> --- to change group id
+
+usermod -L <username> ---to lock user
+usermod -U <username> --- to unlock user
+cp /home/chandan/* /tmp ---copy/take backup of user in home folder
+userdel <username> --to delete the user but it will not delete the user data, your home folder is still available. 
+userdel -r username --recursively find all data related to the username and remove
+
+
+cat /proc/cpuinfo -->to check cpu information
+cat /proc/meminfo -->to check memory information
+
+uname --print information about your linux system.(uname -a)--all information
+
+directory command
+
+cd -->navigate through file & directories
+cd .. -->move one directory up
+cd -    --move to your previous directory
+pwd --show the directory currently working in
+rmdir --delete directory and its content
+scp  -->securely copy a specific file to a server directory.  #scp filename <server/tmp>
+
+sed command -->used for replace the character from one name to other name.
+
+
+update-alternatives --config java   --------> to switch one java version to new java version
+ 
+--- yum remove java* 
+####################
+######## sudo apt-get install openjdk-11-jdk -y
+########################################
+
+jenkins password forget --------> config.xml
+
+hostnamectl set-hostname master then sudo -i
+
+chkconfig httpd on-
+
+to check directory use dir command  ---> dir <directory name>
+
+
+curl https://checkip.amazonaws.com
+curl -s https://api.ipify.org -w "\n" ""
+curl https://icanhazip.com
+curl https://ipinfo.io/ip && echo ""
+curl ifconfig.me && echo ""
+curl https://icanhazip.com
+curl http://169.254.169.254/latest/meta-data/public-ipv4 && echo ""
+
+
+
+
+
+##########
+I had java 7 installed on my ubuntu machine and wanted java 8. For that i followed the following steps
+##########
+
+purge the older with sudo apt-get purge openjdk-\*
+Add repository sudo add-apt-repository ppa:openjdk-r/ppa
+Update the packages sudo apt-get update
+Install java 8 with sudo apt-get install openjdk-8-jdk
+To check list of java versions installed dosudo update-java-alternatives --list
+Select default java for java sudo update-alternatives --config java
+Select default java for javac sudo update-alternatives --config javac
+check with java -version and javac -version to check if update version is installed
