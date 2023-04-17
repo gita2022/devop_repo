@@ -1,0 +1,49 @@
+sudo -i
+apt update -y
+apt install docker.io
+docker --version
+docker pull ubuntu
+docker images
+docker run -it --name mangal -p 81:80 -d ubuntu
+docker container ps
+docker exec -it mangal bash  (we are inside container)
+ls
+mkdir app1
+ll
+cd app1/
+touch sam{1..2}.txt
+ll
+echo "welcome to sample file " > sam1.txt
+cat sam1.txt
+apt update
+cd ..
+apt install apache2
+cd /var/www/html/
+ll
+cd
+service apache2 status
+service apache2 start
+service apache2 status
+exit                    (come out from container)
+docker images 
+docker container ps
+
+git --version
+git clone https://github.com/shashikanth-t/knights.git
+ll
+cd knights/
+ll
+docker ps -a
+docker cp . mangal:/var/www/html     ---check in brower public ip:81
+cd ..
+docker container ps
+docker ps -a
+ll
+cd knights/
+ll
+cd
+docker ps -a
+docker login
+
+
+   
