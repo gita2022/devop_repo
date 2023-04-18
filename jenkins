@@ -2,7 +2,7 @@ create ec2-instance with amazon Linux 2 AMI
 Amazon Linux 2 AMI(HVM) SSD Volume Type
 take access with putty
 install java
-sudo yum install java-1.8.0-openjdk-devel
+sudo amazon-linux-extras install java-openjdk11 -y 
 Add jenkins repo to your yum repository
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo 
 import a key file from jenkins-CI to enable installtion from the package
