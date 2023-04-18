@@ -21,5 +21,5 @@ get the initial password
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword   
 paste password, your jenkins is now accessible
 install suggested plugins  
-Note:- plugins are- Folders, Timestamper, Pipeline, Git ,LDAP ,Workspace, Cleanup, GitHub Branch Source, SSH Build Agents, Email Extension, Ant, Pipeline GitHub Groovy Library, Matrix Authorization Strategy, Mailer,Gradle,Pipeline Stage View, PAM Authentication 
+Note:- plugins are- Folders, Timestamper, Pipeline, Git ,LDAP ,OWASP Markup Formatter,Workspace Cleanup, GitHub Branch Source, SSH Build Agents, Email Extension,Build Timeout, Ant, Pipeline GitHub Groovy Library, Matrix Authorization Strategy, Mailer,Credentials Binding,Gradle,Pipeline Stage View, PAM Authentication 
 Create Admin account
