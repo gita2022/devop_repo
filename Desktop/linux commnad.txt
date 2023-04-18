@@ -38,7 +38,7 @@ scp  -->securely copy a specific file to a server directory.  #scp filename <ser
 sed command -->used for replace the character from one name to other name.
 
 
-update-alternatives --config java   --------> to switch one java version to new java version
+sudo update-alternatives --config java   --------> to switch one java version to new java version
  
 --- yum remove java* 
 ####################
