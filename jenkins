@@ -12,7 +12,7 @@ sudo amazon-linux-extras install epel
 install jenkins
 sudo yum install jenkins -y
 start and enable jenkins service
-sudo systemctl start jenkins.sevice
+sudo systemctl start jenkins.sevice          or    sudo service jenkins start
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
 Access Jenkins Server in Browse in google tab
