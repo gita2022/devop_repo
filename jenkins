@@ -23,3 +23,16 @@ paste password, your jenkins is now accessible
 install suggested plugins  
 Note:- plugins are- Folders, Timestamper, Pipeline, Git ,LDAP ,OWASP Markup Formatter,Workspace Cleanup, GitHub Branch Source, SSH Build Agents, Email Extension,Build Timeout, Ant, Pipeline GitHub Groovy Library, Matrix Authorization Strategy, Mailer,Credentials Binding,Gradle,Pipeline Stage View, PAM Authentication 
 Create Admin account
+
+***jenkins job with GIT Hub repo + Maven-Intergration***
+
+Pre-Requisites- java,maven and git
+install git in ec2 
+sudo yum install git -y
+
+JDK Installation in jenkins
+Jenkins Dashboard-> Manage Jenkins-> Global Tool Configuration-> Add JDK -> choose JDK 8 -> Configure Oracle account credential to download jdk.
+
+Maven Installation in Jenkins:
+
+Jenkins Dashboard-> Manage Jenkins-> Global Tool Configuration->Add maven
