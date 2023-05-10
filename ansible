@@ -1,0 +1,39 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  tasks:
+    - name: Installation of HTTPD & firewalld p[ackages
+      yum:
+        name:
+        - httpd
+        - firewalld
+    - name: Creating index.html
+      copy:
+        content: "welcome to devops\n"
+        dest: /var/www/html/index.html
+    - name: firewalld start & enabled
+      service:
+        name: firewalld
+        state: started
+        enabled: true
+    - name: firewalld permits access to httpd service
+      firewalld:
+        service: http
+        permananet :true
+        state: enabled
+        immideiate: yes
+    - name: httpd start & enabled
+      service:
+        name: httpd
+        state: started
+        enabled: true
+- name: Test intract web server connectivity
+  hosts: webservers
+  become: no
+  tasks:
+    - name: connect to internet webserver
+      uri:
+        url: http://node1
+        return_content: yes
+        state_code: 200
